@@ -15,9 +15,8 @@ public class Main {
 
         int garryMiss = totalCans - garryHit;
         int larryMiss = totalCans - larryHit;
-        String result = garryMiss + " " + larryMiss;
 
-        output.println(result);
+        output.println(garryMiss + " " + larryMiss);
         output.flush();
     }
 }
