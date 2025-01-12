@@ -28,7 +28,7 @@ public class Example6 {
         int[][] result = new int[array.length - 1][array[0].length - 1];
         int delRow = random.nextInt(array.length);
         int delColumn = random.nextInt(array[0].length);
-        System.out.println("Удаляем строку " + (delRow + 1) + " и столбец " + (delColumn +1));
+        System.out.println("Удаляем строку " + (delRow + 1) + " и столбец " + (delColumn + 1));
 
         for(int i = 0; i < result.length; i++){
             for (int j = 0; j < result[0].length; j++){

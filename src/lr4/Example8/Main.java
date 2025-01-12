@@ -20,7 +20,8 @@ public class Main {
         while (continueInput){
             String command = in.next();
             if(command.equals("y")){
-                System.out.println("Текст после обратного преобразования: " + Encrypt.getDecryptedString(encryptedMessage, shift));
+                System.out.println("Текст после обратного преобразования: "
+                        + Encrypt.getDecryptedString(encryptedMessage, shift));
                 continueInput = false;
             }
             else if (command.equals("n")) {
