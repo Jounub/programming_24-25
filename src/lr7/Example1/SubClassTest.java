@@ -17,7 +17,7 @@ public class SubClassTest extends SuperClassTest {
     public String toString(){
         String ClassNameAndFieldValue;
         ClassNameAndFieldValue = "sub" + "\n" +
-                " Class neme: " + this.getClass().getSimpleName() + "\n" +
+                " Class name: " + this.getClass().getSimpleName() + "\n" +
                 " str 1 = " + this.getStr1() + "\n" +
                 " str 2 = " + this.str2 + "\n" +
                 " str 3 = " + this.str3;
