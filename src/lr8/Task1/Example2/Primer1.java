@@ -1,4 +1,4 @@
-package lr8.Task1;
+package lr8.Task1.Example2;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;

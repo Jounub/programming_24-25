@@ -23,4 +23,12 @@ public class ArraysGenerator {
         System.out.println("Массив int: " + Arrays.toString(result));
         return result;
     }
+    public static int[] generateIntArray(int size){
+        int[] result = new int[size];
+        for(int i = 0; i < size; i++){
+            result[i] = random.nextInt();
+        }
+        System.out.println("Массив arr:\n" + Arrays.toString(result));
+        return result;
+    }
 }

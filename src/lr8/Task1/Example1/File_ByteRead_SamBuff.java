@@ -1,4 +1,4 @@
-package lr8.Task1;
+package lr8.Task1.Example1;
 
 import java.io.FileInputStream;
 import java.io.IOException;
