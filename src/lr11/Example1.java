@@ -1,8 +1,7 @@
 package lr11;
 
-import lr6.ArraysGenerator;
-
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Example1 {
@@ -11,7 +10,12 @@ public class Example1 {
         System.out.println("Введите размер массива");
         int size = in.nextInt();
 
-        int[] arr = ArraysGenerator.generateIntArray(size);
+        int[] arr = new int[size];
+
+        Random random = new Random();
+        for(int i = 0; i < size; i++){
+            arr[i] = random.nextInt();
+        }
 
         int[] arrResult = filterEvenNumbers(arr);
         System.out.println("Массив arrResult: ");
