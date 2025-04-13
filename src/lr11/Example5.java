@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class Example5 {
     public static void main(String[] args) {
-        String string = "1.Напишите функцию, которая принимает на вход список строк " +
+        String string = "Напишите функцию, которая принимает на вход список строк " +
                 "и возвращает новый список, содержащий только те строки, " +
                 "которые содержат заданную подстроку.\n";
 
