@@ -5,9 +5,9 @@ import java.util.stream.Collectors;
 
 public class Example3 {
     public static void main(String[] args) {
-        String string = "Напишите функцию, которая принимает на вход список строк " +
-                "и возвращает новый список, содержащий только те строки, " +
-                "которые начинаются с большой буквы.";
+        String string = "Напишите функцию, Которая принимает на вход список строк " +
+                "и возвращает новый список, Содержащий только те строки, " +
+                "которые Начинаются с большой буквы.";
 
         List<String> strings = List.of(string.split(" "));
         System.out.println("\nСтрока после сплитования: \n");
