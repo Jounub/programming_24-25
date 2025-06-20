@@ -10,10 +10,10 @@ public class Buf_WR_IO_4 {
         try{
             br = new BufferedReader(
                     new InputStreamReader(
-                            new FileInputStream("/home/ome123/My/MyFile1.txt"), "cp1251"));
+                            new FileInputStream("src/lr8/Task1/Example9/MyFile1.txt"), "cp1251"));
             bw = new BufferedWriter(
                     new OutputStreamWriter(
-                            new FileOutputStream("/home/ome123/My/MyFile2.txt"), "cp1251"));
+                            new FileOutputStream("src/lr8/Task1/Example9/MyFile2.txt"), "cp1251"));
             int lineCount = 0;
             String s;
             while((s = br.readLine()) != null){

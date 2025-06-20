@@ -9,8 +9,7 @@ public class Buf_RW_2 {
         try {
             br = new BufferedReader(
                     new InputStreamReader(
-                            new FileInputStream("/home/ome123/My/MyFile1.txt"), "cp1251"));
-            //out = new PrintWriter("/home/ome123/My/MyFile2.txt", "cp1251");
+                            new FileInputStream("src/lr8/Task1/Example10/MyFile1.txt"), "cp1251"));
             out = new PrintWriter(System.out);
             int lineCount = 0;
             String s;

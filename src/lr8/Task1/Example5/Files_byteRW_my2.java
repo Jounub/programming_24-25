@@ -9,7 +9,6 @@ public class Files_byteRW_my2 {
             Scanner sc = new Scanner(System.in);
             System.out.println("Введите имя файла=> ");
             String fname = sc.nextLine();
-            //File f1 = new File("/home/ome123/My/" + fname);
             File f1 = new File(fname);
             f1.createNewFile();
             System.out.println("Полный путь файла: " + f1.getAbsolutePath());

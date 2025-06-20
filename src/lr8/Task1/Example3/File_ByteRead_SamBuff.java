@@ -11,29 +11,28 @@ public class File_ByteRead_SamBuff {
         while(true){
             int count = in.read(buff);
             if(count != -1){
-                System.out.println("Количество = " + count + ", buff = "
-                + Arrays.toString(buff) + ", str = "
+                System.out.println("Количество=" + count + ", buff="
+                + Arrays.toString(buff) + ", str ="
                 + new String(buff, 0, count, "cp1251"));
-            } else{
+            } else {
                 break;
             }
         }
     }
 
-    public static void main(String[] args) throws IOException{
-        String fileName = "/home/ome123/opt/MyFile.txt";
+    public static void main(String[] args) throws IOException {
+        String fileName = "E:\\MyFile1.txt";
         InputStream inFile = null;
-
         try{
             inFile = new FileInputStream(fileName);
             readAllByArray(inFile);
-        } catch (IOException e){
-            System.out.printf("Ошибка открытия-закрытия файла " + fileName + e);
+        } catch (IOException e) {
+            System.out.println("Ошибка открытия-закрытия файла " + fileName + e);
         } finally {
             if(inFile != null){
-                try {
+                try{
                     inFile.close();
-                } catch (IOException ignore){
+                } catch(IOException ignore){
                     /*NOP*/
                 }
             }

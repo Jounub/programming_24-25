@@ -8,8 +8,8 @@ public class File_RW_byByte {
         Writer out = null;
 
         try{
-            in = new FileReader("/home/ome123/My/MyFile1.txt");
-            out = new FileWriter("/home/ome123/My/MyFile2.txt", true);
+            in = new FileReader("src/lr8/Task1/Example6/MyFile1.txt");
+            out = new FileWriter("src/lr8/Task1/Example6/MyFile2.txt", true);
 
             int oneByte;
             while((oneByte = in.read()) != -1){

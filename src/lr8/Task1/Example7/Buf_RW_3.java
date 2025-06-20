@@ -8,8 +8,8 @@ public class Buf_RW_3 {
         BufferedWriter out = null;
 
         try{
-            br = new BufferedReader(new FileReader("/home/ome123/My/MyFile1.txt"), 1024);
-            out = new BufferedWriter(new FileWriter("/home/ome123/My/MyFile2.txt"));
+            br = new BufferedReader(new FileReader("src/lr8/Task1/Example7/MyFile1.txt"), 1024);
+            out = new BufferedWriter(new FileWriter("src/lr8/Task1/Example7/MyFile2.txt"));
 
             int lineCount = 0;
             String s;

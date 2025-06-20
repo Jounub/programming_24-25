@@ -1,42 +1,53 @@
 package lr8.Task2;
 
-import org.apache.poi.hssf.record.chart.DataFormatRecord;
-
 import java.io.*;
-import java.util.Random;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
     public static void main(String[] args) {
-        Random random = new Random();
-        //Создать проект, позволяющий из одного, предварительно созданного
-        // программными средствами файла, переписать данные, соответствующие
-        // условию - в исходном файле содержится две строки в формате UTF-8 и
-        // 5 чисел типа double. В результирующий файл переписать вторую строку
-        // и положительные числа.
+        BufferedReader br = null;
+        BufferedWriter out=null;
+
         try{
-            File f1 = new File("/home/ome123/IdeaProjects/programming_24-25/src/lr8/Task2/lr8task2.txt");
-            f1.createNewFile();
+            br = new BufferedReader(
+                    new InputStreamReader(
+                            new FileInputStream("src/lr8/Task2/lr8task2Input.txt"), StandardCharsets.UTF_8));
+            out = new BufferedWriter(
+                    new OutputStreamWriter(
+                            new FileOutputStream("src/lr8/Task2/lr8task2Output.txt"), StandardCharsets.UTF_8));
 
-            String s1 = "1st string";
-            String s2 = "2nd string";
-            double[] numbers = new double[5];
-            for(int i = 0; i < numbers.length; i++){
-                numbers[i] = random.nextDouble(-100, 100);
+            br.readLine();
+            String secondLine = br.readLine();
+            if (secondLine != null) {
+                out.write(secondLine);
+                out.newLine();
             }
-
-
-            DataOutputStream dOut = new DataOutputStream(new FileOutputStream(f1));
-            dOut.writeUTF(s1);
-            dOut.writeUTF(s2);
-            for(double n : numbers){
-                dOut.writeDouble(n);
-                System.out.println(n);
+            for (int i =0; i<5; i++){
+                String numberStr = br.readLine();
+                if(numberStr != null){
+                    try{
+                        double num = Double.parseDouble(numberStr);
+                        if(num>0){
+                            out.write(String.valueOf(num) + "\n");
+                        }
+                    } catch (NumberFormatException e){
+                        e.printStackTrace();
+                    }
+                }
             }
-
-            DataInputStream dIn = new DataInputStream(new FileInputStream(f1));
-
         } catch (IOException e){
             e.printStackTrace();
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class FilesData {
     public static void main(String[] args) {
         try{
-            File f1 = new File("/home/ome123/My/numIsh.txt");
+            File f1 = new File("src/lr8/Task1/Example4/numIsh.txt");
             f1.createNewFile();
             Scanner sc = new Scanner(System.in, "cp1251");
 
@@ -23,7 +23,7 @@ public class FilesData {
             wr.flush();
             wr.close();
 
-            File f2 = new File("/home/ome123/My/numIsh.txt");
+            File f2 = new File("src/lr8/Task1/Example4/numRez.txt");
             f2.createNewFile();
 
             DataInputStream rd =

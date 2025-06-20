@@ -18,7 +18,7 @@ public class InConvertInText {
 
     public static void main(String[] args) {
         try{
-            InputStream inFile = new FileInputStream("/home/ome123/My/MyFile1.txt");
+            InputStream inFile = new FileInputStream("src/lr8/Task1/Example8/MyFile1.txt");
             Reader rFile = new InputStreamReader(inFile, "cp1251");
 
             readAllByByte(rFile);
